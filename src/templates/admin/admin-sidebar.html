@@ -1,0 +1,54 @@
+<div class="page-sidebar-wrapper">
+    <div class="page-sidebar navbar-collapse collapse">
+        <ul class="page-sidebar-menu" data-keep-expanded="true" data-auto-scroll="true" data-slide-speed="200">
+
+            <!-- Dashboard Heading basically-->
+            <li ng-class="{active: $state.includes('adminDashBoard.homepage')}">
+                <a ui-sref="adminDashBoard.homepage">
+                    <i class="icon-grid"></i>
+                    <span class="title">Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a>
+                    <i class="fa fa-search"></i>
+                    <span class="title">
+                        <input type="text" class="search-input" ng-model="instrument" placeholder="Search">
+                    </span>
+                </a>
+            </li>
+
+            <li ng-if="instrument">
+                <a class="instruments-title">
+                    <i class="icon-options"></i>
+                    <span class="title">Instruments</span>
+                </a>
+            </li>
+
+            <li ng-if="instrument" ng-repeat="item in data | filter:instrument">
+                <a ng-click="addInstrument(item)">
+                    <i class="fa fa-plus"></i>
+                    <span class="title text-uppercase">{{item.underlying}}</span>
+                </a>
+            </li>
+
+            <li ng-if="userInstruments.length > 0">
+                <a class="user-instruments-title">
+                    <i class="icon-list"></i>
+                    <span class="title">User Instruments</span>
+                </a>
+            </li>
+
+            <li ng-if="userInstruments.length > 0" ng-repeat="item in userInstruments">
+                <a ng-click="removeInstrument($index)">
+                    <i class="fa fa-minus"></i>
+                    <span class="title text-uppercase">{{item.underlying}}</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+

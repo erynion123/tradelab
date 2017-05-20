@@ -1,0 +1,58 @@
+.padder-v {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.item {
+    position: relative;
+}
+.panel {
+    border-radius: 2px;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+.font-thin {
+    font-weight: 300;
+    margin:0;
+    font-size: 36px;
+}
+.instruments-title,.instruments-title:hover,.instruments-title:active{
+    background: #0a7cb8!important;
+    color: #fff!important;
+    border-top-color:transparent!important;
+}
+.instruments-title > i{
+    color: #fff!important;
+}
+.user-instruments-title,.user-instruments-title:hover,.user-instruments-title:active{
+    background: #ffb400!important;
+    color: #fff!important;
+    border-top-color:transparent!important;
+    margin-top: 20px;
+}
+.user-instruments-title > i{
+    color: #fff!important;
+}
+.search-input{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.transaction-chart{
+    background:url('../images/chart.png');
+    background-repeat: no-repeat;
+    height: 333px;
+    width:100%;
+}
+.user-details > h3,.table-wrapper > h3{
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.table-wrapper > table{
+    background: #fff;
+    border:1px solid #e3e3e3;
+}

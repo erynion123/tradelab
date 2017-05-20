@@ -1,0 +1,78 @@
+<div class="container">
+
+    <div class="user-details">
+        <h3>User Details</h3>
+        <div class="row">
+            <div class="col-md-12 col-lg-6">
+                <div class="row row-sm text-center">
+                    <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-6">
+                        <div class="panel padder-v item">
+                            <div class="font-thin h1 ng-binding">{{230| currency}}</div>
+                            <span class="text-muted text-xs">Profit</span>
+                        </div>
+                    </div>
+
+                    <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-6">
+                        <div class="panel padder-v item">
+                            <div class="font-thin h1 ng-binding">{{0| currency}}</div>
+                            <span class="text-muted text-xs">loss</span>
+                        </div>
+                    </div>
+
+                    <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-6">
+                        <div class="panel padder-v item">
+                            <div class="font-thin h1 ng-binding"><span ng-if="userInstruments.length > 0">{{userInstruments.length}}</span><span ng-if="userInstruments.length == 0">0</span></div>
+                            <span class="text-muted text-xs">Instruments Bought</span>
+                        </div>
+                    </div>
+
+                    <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-6">
+                        <div class="panel padder-v item">
+                            <div class="font-thin h1 ng-binding">0</div>
+                            <span class="text-muted text-xs">Instruments Sold</span>
+                        </div>
+                    </div>
+                    <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-6">
+                        <div class="panel padder-v item">
+                            <div class="font-thin h1 ng-binding">{{23000 | currency}}</div>
+                            <span class="text-muted text-xs">Cash Spent</span>
+                        </div>
+                    </div>
+
+                    <div class="col-xxs-12 col-xs-6 col-sm-6 col-md-4 col-lg-6">
+                        <div class="panel padder-v item">
+                            <div class="font-thin h1 ng-binding">{{10000 | currency}}</div>
+                            <span class="text-muted text-xs">Cash Balance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="transaction-chart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="table-wrapper" ng-if="userInstruments.length > 0">
+        <h3>Subscribed Instruments</h3>
+        <table class="table table-hover table-striped">
+            <tr>
+                <th>Name</th>
+                <th>LTP</th>
+                <th>%Change</th>
+                <th>Open</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Prev Close</th>
+            </tr>
+            <tr ng-repeat="item in userInstruments">
+                <td class="text-capitalize">{{item.underlying}}</td>
+                <td inc="item.attr.ltp">{{item.attr.ltp}}</td>
+                <td inc="item.attr.change">{{item.attr.change}}</td>
+                <td inc="item.attr.open">{{item.attr.open}}</td>
+                <td inc="item.attr.high">{{item.attr.high}}</td>
+                <td inc="item.attr.low">{{item.attr.low}}</td>
+                <td inc="item.attr.prevClose">{{item.attr.prevClose}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

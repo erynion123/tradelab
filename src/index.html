@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js" data-ng-app="b2bDb"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js" data-ng-app="b2bDb"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" data-ng-app="b2bDb" data-ng-controller="AppController">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <title data-ng-bind="'Tradelabs | ' + $state.current.data.pageTitle"></title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+    <!--Change this path to the deploying directory relative path-->
+    <base href="/tradelab/dist/">
+
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/plugins.css"/>
+    <link rel="stylesheet" type="text/css" href="css/tradelab.css"/>
+    <!--FCM Manifest-->
+    <link rel="manifest" href="config/manifest.json">
+
+    <link id="ng_load_plugins_before"/>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+
+</head>
+
+<body class="page-header-fixed page-container-bg-solid">
+
+    <!-- BEGIN PAGE SPINNER -->
+    <div ng-spinner-bar class="page-spinner-bar">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+    <!-- END PAGE SPINNER -->
+
+    <!-- BEGIN HEADER -->
+    <div data-ng-if="$state.current.data.pageTitle!=='Login'"
+         data-ng-include="'templates/common/header.html'">
+    </div>
+    <!-- END HEADER -->
+
+    <div ui-view class="fade-in-up">
+        <!--
+                ALL CONTENT GOES HERE
+        -->
+    </div>
+
+    <script src="js/plugins.js"></script>
+
+    <!-- build:js -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers/AppController.js"></script>
+    <script src="app/directives/spinner.js"></script>
+    <script src="app/routes/routes.js"></script>
+    <script src="app/services/auth.js"></script>
+    <script src="app/services/data.js"></script>
+
+    <!-- endbuild -->
+
+</body>
+</html>

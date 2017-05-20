@@ -1,0 +1,41 @@
+/*Professional profile picture crop css*/
+.cropArea {
+    background: #E4E4E4;
+    overflow: hidden;
+    width:500px;
+    height:350px;
+}
+/* END Professional profile picture crop css*/
+
+.page-404 {
+    margin-top: 100px;
+}
+.custom404{
+    color: #fafafa;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.editable-wrap {
+    display: block!important;
+}
+
+/*adding delete button to gallery*/
+.ng-gallery-content > a.trash-popup {
+    font-size: 42px;
+    float: right;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 30px 0 0;
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    right: 0;
+}
+/*Increasing size of buttons in galley lightbox*/
+.ng-gallery-content > a > [class*=" fa-"]:not(.fa-stack) {
+    font-size: 42px;
+}
+
+.content {
+    margin: 0 auto;
+}
