@@ -6,3 +6,6 @@
 3. npm install
 4. bower install
 5. gulp
+
+Dashboard username : akash.babber@gmail.com
+          password : 1234
