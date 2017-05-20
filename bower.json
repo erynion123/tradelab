@@ -1,10 +1,10 @@
 {
-  "name": "mojojo_b2b_dashboard",
+  "name": "Tradelab_dashboard",
   "version": "0.1.0",
   "authors": [
     "Akash Babber <akash.babber@gmail.com>"
   ],
-  "description": "mojojo b2b dashboard",
+  "description": "Tradelab dashboard",
   "license": "MIT",
   "ignore": [
     "**/.*",
