@@ -9,3 +9,7 @@
 
 Dashboard username : akash.babber@gmail.com
           password : 1234
+
+#note 
+Gulp should pe pre-installed
+To install gulp : npm install --global gulp-cli
